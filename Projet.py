@@ -37,55 +37,55 @@ def ren () :
 def red () :
     global sc, color_word, il
     if color_word[il] == "red" and 30>temps > 0 :
-        sc += 1
         score.configure(text= "score :" + str (sc))
         rep.append("red")
         il += 1
+        scoree()
         rr()
 
 def blue () :
     global sc, color_word, il
     if color_word[il] == "blue" and 30 > temps > 0:
-        sc += 1
         score.configure(text="score :" + str(sc))
         rep.append("blue")
         il += 1
+        scoree()
         rr()
 
 def green () :
     global sc, color_word, il
     if color_word[il] == "green" and 30 > temps > 0:
-        sc += 1
         score.configure(text="score :" + str(sc))
         rep.append("green")
         il += 1
+        scoree()
         rr()
 
 def pink () :
     global sc, color_word, il
     if color_word[il] == "pink" and 30 > temps > 0:
-        sc += 1
         score.configure(text="score :" + str(sc))
         rep.append("pink")
         il += 1
+        scoree()
         rr()
 
 def yellow () :
     global sc, color_word, il
     if color_word[il] == "yellow" and 30 > temps > 0:
-        sc += 1
         score.configure(text="score :" + str(sc))
         rep.append("yellow")
         il += 1
+        scoree()
         rr()
 
 def orange () :
     global sc, color_word, il
     if color_word[il] == "orange" and 30 > temps > 0:
-        sc += 1
         score.configure(text="score :" + str(sc))
         rep.append("orange")
         il += 1
+        scoree()
         rr()
 
 
@@ -97,14 +97,15 @@ def white () :
     global sc, color_word, il
 
     if color_word[il] == "white" and 30 > temps > 0:
-        sc += 1
         score.configure(text="score :" + str(sc))
         rep.append("white")
         il += 1
+        scoree()
         rr()
 
 c = Canvas(window, width=w, height=z)
 
+frame = Frame(window)
 start = Button(window, text= "démarrer", font=("segoe script", 16), fg = "blue", command = chrono)
 reset = Button(window, text= "réinitialiser", font=("segoe script", 16), fg = "blue", command = ren)
 label = Label(window, text = "Tapez la couleur des mots, et pas le texte des mots !!!", font=("segoe script", 14))
@@ -122,6 +123,8 @@ def r () :
     global co, il, color_word, text_word, couleur, rep, frame
     frame = Frame(window)
     frame.place(x=w // k+4, y=150)
+    global co, il, color_word, text_word, couleur
+
     co = 0
     color_word = choices(color_list, k=k)
     text_word = choices(color_list, k=k)
@@ -132,13 +135,19 @@ def r () :
         couleur.grid(row=0, column = co)
         co += 1
         il = 0
+def scoree() :
+    global couleur, k, rep, sc
+    if len(rep)+1 == k:
+        sc+=1
 
 r()
 def rr () :
     global couleur, k, rep,text_word
+    global couleur, k, rep, sc
 
     if len(rep) == k  :
         effacer()
+        couleur.destroy()
         rep = []
         k = randint(2, 6)
         r()
@@ -150,6 +159,8 @@ reset .grid(column = 1, row = 1)
 label.place(x=70, y=20)
 score.place(x=280, y=60)
 time.place(x= 230, y = 100)
+
+frame.place(x= w// k, y = 150)
 b_red.place(x= 60, y = 200)
 b_blue.place(x= 180, y = 200)
 b_green.place(x= 280, y = 200)
@@ -158,3 +169,8 @@ b_yellow.place(x= 480, y = 200)
 b_orange.place(x= 200, y = 280)
 b_white.place(x= 350, y = 280)
 window.mainloop()
+print(rep)
+print(color_word)
+print(il)
+rr()
+print(len(rep), k)
