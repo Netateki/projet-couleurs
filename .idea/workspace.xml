@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b52e256e-5786-4651-ac21-371d3bcd0d88" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-    </list>
+    <list default="true" id="b52e256e-5786-4651-ac21-371d3bcd0d88" name="Default Changelist" comment="Comit pour que les mots ne se superposent." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619620068745</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Comit pour que les mots ne se superposent.">
+      <created>1619624084736</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619624084736</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -105,6 +109,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ajout du score" />
     <MESSAGE value="Pour que les mots colorés ne se supperposent pas." />
-    <option name="LAST_COMMIT_MESSAGE" value="Pour que les mots colorés ne se supperposent pas." />
+    <MESSAGE value="Comit pour que les mots ne se superposent." />
+    <option name="LAST_COMMIT_MESSAGE" value="Comit pour que les mots ne se superposent." />
   </component>
 </project>
