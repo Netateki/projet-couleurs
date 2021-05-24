@@ -134,3 +134,4 @@ b_white.place(x= 350, y = 280)
 
 
 window.mainloop()
+#fin
