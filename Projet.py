@@ -38,7 +38,7 @@ def gner():
 
 def ecriscore():
     """
-	Fonction qui a pour but d'écrire le score dans un document .txt et de l'organiser.
+	Fonction qui a pour but d'écrire le score dans un document .txt et de l'organiser..
 	"""
     global sc
 
